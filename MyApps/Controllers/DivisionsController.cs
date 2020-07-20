@@ -43,22 +43,6 @@ namespace MyApps.Controllers
                 ModelState.AddModelError(string.Empty, "Server error try after some time.");
             }
             return Json(division);
-            //IEnumerable<DivisionVM> divisionVM = null;
-            //var responseTask = client.GetAsync("Divisions");
-            //responseTask.Wait();
-            //var result = responseTask.Result;
-            //if (result.IsSuccessStatusCode)
-            //{
-            //    var readTask = result.Content.ReadAsAsync<IList<DivisionVM>>();
-            //    readTask.Wait();
-            //    divisionVM = readTask.Result;
-            //}
-            //else
-            //{
-            //    divisionVM = Enumerable.Empty<DivisionVM>();
-            //    ModelState.AddModelError(string.Empty, "Server Error");
-            //}
-            //return Json(divisionVM);
         }
 
         public JsonResult GetById(int Id)
@@ -77,18 +61,6 @@ namespace MyApps.Controllers
                 ModelState.AddModelError(string.Empty, "Server error try after some time.");
             }
             return Json(divisionVM);
-            //HttpResponseMessage response = await client.GetAsync("Divisions");
-            //if (response.IsSuccessStatusCode)
-            //{
-            //    var data = await response.Content.ReadAsAsync<IList<DivisionVM>>();
-            //    var dept = data.FirstOrDefault(t => t.Id == Id);
-            //    var json = JsonConvert.SerializeObject(dept, Formatting.None, new JsonSerializerSettings()
-            //    {
-            //        ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-            //    });
-            //    return Json(json);
-            //}
-            //return Json("internal server error");
         }
 
         public JsonResult InsertOrUpdate(DivisionVM divisionVM)

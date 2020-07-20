@@ -21,10 +21,6 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        //public async Task<IEnumerable<Department>> Get()
-        //{
-        //    return await _departmentRepository.Get();
-        //}
         public async Task<IEnumerable<Department>> Get()
         {
             return await _departmentRepository.Get();
@@ -32,10 +28,6 @@ namespace API.Controllers
 
         // GET api/<DepartmentsController>/5
         [HttpGet("{id}")]
-        //public async Task<IEnumerable<Department>> GetById(int Id)
-        //{
-        //    return await _departmentRepository.Get(Id);
-        //}
         public Department GetById(int Id)
         {
             return _departmentRepository.Get(Id);

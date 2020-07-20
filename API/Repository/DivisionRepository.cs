@@ -65,27 +65,6 @@ namespace API.Repository
             }
         }
 
-        //public async Task<IEnumerable<DivisionVM>> Get()
-        //{
-        //    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("MyConnection")))
-        //    {
-        //        var procName = "SPGetAllDivision";
-        //        var Get = await connection.QueryAsync<DivisionVM>(procName, commandType: CommandType.StoredProcedure);
-        //        return Get;
-        //    }
-        //}
-
-        //public async Task<IEnumerable<DivisionVM>> Get(int Id)
-        //{
-        //    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("MyConnection")))
-        //    {
-        //        var procName = "SPGetByIdDivision";
-        //        parameters.Add("Id", Id);
-        //        var GetById = await connection.QueryAsync<DivisionVM>(procName, parameters, commandType: CommandType.StoredProcedure);
-        //        return GetById;
-        //    }
-        //}
-
         public int Update(int Id, DivisionVM divisionVM)
         {
             using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("MyConnection")))

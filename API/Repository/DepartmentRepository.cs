@@ -64,19 +64,6 @@ namespace API.Repository
             }
         }
 
-        //Fix
-        //public async Task<IEnumerable<Department>> Get(int Id)
-        //{
-        //    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("MyConnection")))
-        //    {
-        //        var procName = "SPGetByIdDepartment";
-        //        parameters.Add("Id", Id);
-        //        var GetById = await connection.QueryAsync<Department>(procName, parameters, commandType: CommandType.StoredProcedure);
-        //        return GetById;
-        //    }
-        //}
-        //fix
-
         public int Update(int Id, Department department)
         {
             using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("MyConnection")))
@@ -88,17 +75,5 @@ namespace API.Repository
                 return Insert;
             }
         }
-
-        //fix
-        //public async Task<IEnumerable<Department>> Get()
-        //{
-        //    using (SqlConnection connection = new SqlConnection(_configuration.GetConnectionString("MyConnection")))
-        //    {
-        //        var procName = "SPGetAllDepartment";
-        //        var Get = await connection.QueryAsync<Department>(procName, commandType: CommandType.StoredProcedure);
-        //        return Get;
-        //    }
-        //}
-        //fix
     }
 }

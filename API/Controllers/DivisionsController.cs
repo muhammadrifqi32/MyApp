@@ -24,17 +24,9 @@ namespace API.Controllers
         {
             return await _divisionRepository.Get();
         }
-        //public IEnumerable<DivisionVM> Get()
-        //{
-        //    return _divisionRepository.Get();
-        //}
 
         // GET api/<DepartmentsController>/5
         [HttpGet("{id}")]
-        //public async Task<IEnumerable<DivisionVM>> GetById(int Id)
-        //{
-        //    return await _divisionRepository.Get(Id);
-        //}
         public DivisionVM GetById(int Id)
         {
             return _divisionRepository.Get(Id);

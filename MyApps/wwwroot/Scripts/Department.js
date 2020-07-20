@@ -33,28 +33,6 @@ function ClearScreen() {
     $('#Save').show();
 }
 
-//function GetById(id) {
-//    $.ajax({
-//        url: "/Departments/GetById/" + id,
-//        type: "GET",
-//        contentType: "application/json;charset=utf-8",
-//        dataType: "json",
-//        async: false,
-//        success: function (result) {
-//            debugger;
-//            const obj = JSON.parse(result);
-//            $('#Id').val(obj.Id);
-//            $('#Name').val(obj.Name);
-//            $('#myModal').modal('show');
-//            $('#Update').show();
-//            $('#Save').hide();
-//        },
-//        error: function (errormessage) {
-//            alert(errormessage.responseText);
-//        }
-//    });
-//}
-
 function GetById(id) {
     //debugger;
     $.ajax({

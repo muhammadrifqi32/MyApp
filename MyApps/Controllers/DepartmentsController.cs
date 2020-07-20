@@ -41,59 +41,7 @@ namespace MyApps.Controllers
                 ModelState.AddModelError(string.Empty, "Server error try after some time.");
             }
             return Json(department);
-            //IEnumerable<Department> departments = null;
-            //var responseTask = client.GetAsync("Departments");
-            //responseTask.Wait();
-            //var result = responseTask.Result;
-            //if (result.IsSuccessStatusCode)
-            //{
-            //    var readTask = result.Content.ReadAsAsync<IList<Department>>();
-            //    readTask.Wait();
-            //    departments = readTask.Result;
-            //}
-            //else
-            //{
-            //    departments = Enumerable.Empty<Department>();
-            //    ModelState.AddModelError(string.Empty, "Server Error");
-            //}
-            //return Json(departments);
         }
-
-        //public async Task<JsonResult> GetById(int Id)
-        //{
-        //    HttpResponseMessage response = await client.GetAsync("Departments");
-        //    if (response.IsSuccessStatusCode)
-        //    {
-        //        var data = await response.Content.ReadAsAsync<IList<Department>>();
-        //        var dept = data.FirstOrDefault(t => t.Id == Id);
-        //        var json = JsonConvert.SerializeObject(dept, Formatting.None, new JsonSerializerSettings()
-        //        {
-        //            ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-        //        });
-        //        return Json(json);
-        //    }
-        //    return Json("internal server error");
-        //    //Department department = null;
-        //    //var responseTask = client.GetAsync("Departments/" + Id);
-        //    //responseTask.Wait();
-        //    //var result = responseTask.Result;
-        //    //if (result.IsSuccessStatusCode)
-        //    //{
-        //    //    var json = JsonConvert.DeserializeObject(result.Content.ReadAsStringAsync().Result).ToString();
-        //    //    department = JsonConvert.DeserializeObject<Department>(json);
-        //    //}
-        //    //else
-        //    //{
-        //    //    ModelState.AddModelError(string.Empty, "Server error try after some time.");
-        //    //}
-        //    //return Json(department);
-        //}
-
-        //part of get by id
-        //    //var get = client.GetAsync("Departments/" + Id).Result;
-        //    //var read = get.Content.ReadAsAsync<Department>().Result;
-        //    //return Json(new { data = read });
-        //    part of get by id
 
         public JsonResult GetById(int Id)
         {
